@@ -3,10 +3,14 @@
   <head>
     <title>Bootstrap</title>
     <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="apple-touch-icon" href="./icon.png" sizes="57x57">
     <style type="text/css">
-#container {
-  display: none;
+body {
+    color: #FFF;
+    background-color: #000;
 }
     </style>
   </head>
@@ -17,15 +21,14 @@
     </div>
   </body>
   <script type="text/javascript">
-    (function() {
-        window.addEventListener("load", function() {
-            if (location.hash == "create") {
-                document.getElementById("container").style.display = "box";
-            }
-            else {
-                window.alert("Boot!!!");
-            }
-        }, false);
-    })();
+    window.addEventListener("load", function(e) {
+        if (location.hash) {
+            document.getElementById("container").style.display = "none";
+            window.alert("boot");
+        }
+        else {
+            location.hash = "boot";
+        }
+    }, false);
   </script>
 </html>
