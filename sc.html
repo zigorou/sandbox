@@ -18,12 +18,14 @@
   </body>
   <script type="text/javascript">
     (function() {
-        if (location.hash == "create") {
-            document.getElementById("container").style.display = "box";
-        }
-        else {
-            window.alert("Boot!!!");
-        }
+        window.addEventListener("load", function() {
+            if (location.hash == "create") {
+                document.getElementById("container").style.display = "box";
+            }
+            else {
+                window.alert("Boot!!!");
+            }
+        }, false);
     })();
   </script>
 </html>
