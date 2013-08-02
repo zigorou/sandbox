@@ -3,17 +3,25 @@
   <head>
     <title>Bootstrap</title>
     <link rel="apple-touch-icon" href="./icon.png" sizes="57x57">
+    <style type="text/css">
+#container {
+  display: none;
+}
+    </style>
   </head>
   <body>
     <h1>Bootstrap</h1>
+    <div id="container">
+      Please create shortcut
+    </div>
   </body>
   <script type="text/javascript">
     (function() {
-        if (location.hash == "boot") {
-            window.alert("Boot");
+        if (location.hash == "create") {
+            document.getElementById("container").style.display = "box";
         }
         else {
-            location.hash = "boot";
+            window.alert("Boot!!!");
         }
     })();
   </script>
